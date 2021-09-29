@@ -1,0 +1,30 @@
+import java.util.*;
+class Solution{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        ArrayList<Long> arr=new ArrayList<Long>(5);
+        long[] na=new long[5];
+        for(long i=0;i<5;i++){
+            na[(int)i]=sc.nextInt();   
+        }
+        
+        for(long j=0;j<5;j++){
+            long s=0;
+            for(long k=0;k<5;k++){
+                if(j==k){
+                    continue;
+                }
+                else{
+                    s+=na[(int)k];
+                }
+            }
+            arr.add(s);
+        }
+        Collections.sort(arr);
+        long a=arr.get((int)0);
+        long b=arr.get((int)4);
+        System.out.print(a+" ");
+        System.out.print(b);
+      
+    }
+}
